@@ -114,6 +114,7 @@ endif()
 
 # Define library target.
 add_library(junction ${JUNCTION_FILES})
+set_property(TARGET junction PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 # Set include dirs for this library (done last, so it's not inherited by subprojects like Tervel, NBDS).
 include_directories(${JUNCTION_ALL_INCLUDE_DIRS})
